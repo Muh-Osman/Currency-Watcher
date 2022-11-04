@@ -10,6 +10,7 @@ body {
     font-weight: 500;
     font-size: 18px;
     color: #3f3f42;
+    background-color: #202124;
 }
 
 .usd {
@@ -24,11 +25,65 @@ img {
     width: 100%;
 }
 
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 15px;
+
+}
+
+.input-box input {
+    width: 10%;
+    height: 38px;
+    transition: .2s;
+    padding: 10px;
+    border: none;
+    text-align:center
+}
+
+input:focus-visible {
+    outline: none;
+    width: 15%;
+
+}
+
+.input-box input:hover {
+    width: 15%;
+
+}
+
+.input-group-text {
+    margin: 0;
+}
+
+
+input[type=number] {
+    position: relative; 
+    padding: 5px;
+  }
+
+  input[type=number]::-webkit-outer-spin-button, 
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transition: .2s;
+  }
+
+
+
+
+
 .currency-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
     width: 100%;
     flex: 1;
 }
@@ -36,18 +91,19 @@ img {
 .currency-box>div {
     width: 150px;
     aspect-ratio: 1 / 1;
-    background-color: #f1f1f1;
+    background-color: rgb(242, 139, 130);
     text-align: center;
     padding: 10px;
     border-radius: 9px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 2px 16px;
     transition: .2s;
+    box-shadow: rgba(242, 139, 130, 0.16) 0px 3px 6px, rgba(242, 139, 130, 0.23) 0px 3px 6px;
+
 }
 
 .currency-box>div:hover {
     scale: 1.1;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
+    background-color: rgb(129, 201, 149);
+    box-shadow: rgba(129, 201, 149, 0.16) 0px 3px 6px, rgba(129, 201, 149, 0.23) 0px 3px 6px;
 }
 
 span {
