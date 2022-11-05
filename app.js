@@ -224,12 +224,190 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
         }
 
 
+        var oldG = window.localStorage.getItem('QAR');
+        var arrowqar = document.querySelector('.arrowqar');
+
+        if (oldG > currency.rates['QAR']) {
+            arrowqar.innerHTML = up;
+
+        } else if (oldG < currency.rates['QAR']) {
+
+            arrowqar.innerHTML = down;
+
+        } else {
+            arrowqar.innerHTML = equal;
+        }
+
+
+        var oldH = window.localStorage.getItem('BHD');
+        var arrowbhd = document.querySelector('.arrowbhd');
+
+        if (oldH > currency.rates['BHD']) {
+            arrowbhd.innerHTML = up;
+
+        } else if (oldH < currency.rates['BHD']) {
+
+            arrowbhd.innerHTML = down;
+
+        } else {
+            arrowbhd.innerHTML = equal;
+        }
+
+
+        var oldI = window.localStorage.getItem('OMR');
+        var arrowomr = document.querySelector('.arrowomr');
+
+        if (oldI > currency.rates['OMR']) {
+            arrowomr.innerHTML = up;
+
+        } else if (oldI < currency.rates['OMR']) {
+
+            arrowomr.innerHTML = down;
+
+        } else {
+            arrowomr.innerHTML = equal;
+        }
+
+
+        var oldJ = window.localStorage.getItem('EUR');
+        var arroweur = document.querySelector('.arroweur');
+
+        if (oldJ > currency.rates['EUR']) {
+            arroweur.innerHTML = up;
+
+        } else if (oldJ < currency.rates['EUR']) {
+
+            arroweur.innerHTML = down;
+
+        } else {
+            arroweur.innerHTML = equal;
+        }
+
+
+        var oldK = window.localStorage.getItem('CAD');
+        var arrowcad = document.querySelector('.arrowcad');
+
+        if (oldK > currency.rates['CAD']) {
+            arrowcad.innerHTML = up;
+
+        } else if (oldK < currency.rates['CAD']) {
+
+            arrowcad.innerHTML = down;
+
+        } else {
+            arrowcad.innerHTML = equal;
+        }
 
 
 
+        var oldL = window.localStorage.getItem('GBP');
+        var arrowgbp = document.querySelector('.arrowgbp');
+
+        if (oldL > currency.rates['GBP']) {
+            arrowgbp.innerHTML = up;
+
+        } else if (oldL < currency.rates['GBP']) {
+
+            arrowgbp.innerHTML = down;
+
+        } else {
+            arrowgbp.innerHTML = equal;
+        }
 
 
 
+        var oldM = window.localStorage.getItem('TRY');
+        var arrowtry = document.querySelector('.arrowtry');
+
+        if (oldM > currency.rates['TRY']) {
+            arrowtry.innerHTML = up;
+
+        } else if (oldM < currency.rates['TRY']) {
+
+            arrowtry.innerHTML = down;
+
+        } else {
+            arrowtry.innerHTML = equal;
+        }
+
+
+
+        var oldN = window.localStorage.getItem('SEK');
+        var arrowsek = document.querySelector('.arrowsek');
+
+        if (oldN > currency.rates['SEK']) {
+            arrowsek.innerHTML = up;
+
+        } else if (oldN < currency.rates['SEK']) {
+
+            arrowsek.innerHTML = down;
+
+        } else {
+            arrowsek.innerHTML = equal;
+        }
+
+
+        var oldO = window.localStorage.getItem('NOK');
+        var arrownok = document.querySelector('.arrownok');
+
+        if (oldO > currency.rates['NOK']) {
+            arrownok.innerHTML = up;
+
+        } else if (oldO < currency.rates['NOK']) {
+
+            arrownok.innerHTML = down;
+
+        } else {
+            arrownok.innerHTML = equal;
+        }
+
+
+
+        var oldP = window.localStorage.getItem('DKK');
+        var arrowdkk = document.querySelector('.arrowdkk');
+
+        if (oldP > currency.rates['DKK']) {
+            arrowdkk.innerHTML = up;
+
+        } else if (oldP < currency.rates['DKK']) {
+
+            arrowdkk.innerHTML = down;
+
+        } else {
+            arrowdkk.innerHTML = equal;
+        }
+
+
+
+        var oldQ = window.localStorage.getItem('BTC');
+        var arrowbtc = document.querySelector('.arrowbtc');
+
+        if (oldQ > currency.rates['BTC']) {
+            arrowbtc.innerHTML = up;
+
+        } else if (oldQ < currency.rates['BTC']) {
+
+            arrowbtc.innerHTML = down;
+
+        } else {
+            arrowbtc.innerHTML = equal;
+        }
+
+
+
+        var oldR = window.localStorage.getItem('ETH');
+        var arroweth = document.querySelector('.arroweth');
+
+        if (oldR > currency.rates['ETH']) {
+            arroweth.innerHTML = up;
+
+        } else if (oldR < currency.rates['ETH']) {
+
+            arroweth.innerHTML = down;
+
+        } else {
+            arroweth.innerHTML = equal;
+        }
 
 
 
