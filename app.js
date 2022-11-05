@@ -20,6 +20,8 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
         const sek = document.querySelector('.sek-num');
         const nok = document.querySelector('.nok-num');
         const dkk = document.querySelector('.dkk-num');
+        const btc = document.querySelector('.btc-num');
+        const eth = document.querySelector('.eth-num');
 
 
 
@@ -39,6 +41,8 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
         sek.innerHTML = Number.parseFloat(currency.rates['SEK']).toFixed(3);
         nok.innerHTML = Number.parseFloat(currency.rates['NOK']).toFixed(3);
         dkk.innerHTML = Number.parseFloat(currency.rates['DKK']).toFixed(3);
+        btc.innerHTML = Number.parseFloat(currency.rates['BTC']).toFixed(3);
+        eth.innerHTML = Number.parseFloat(currency.rates['ETH']).toFixed(3);
 
 
 
@@ -93,6 +97,12 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
 
             var flotSixteen = input.value * currency.rates['TRY'];
             tryy.innerHTML = Number.parseFloat(flotSixteen).toFixed(3);
+
+            var flotSeventeen = input.value * currency.rates['BTC'];
+            btc.innerHTML = Number.parseFloat(flotSeventeen).toFixed(3);
+
+            var flotEightteen = input.value * currency.rates['ETH'];
+            eth.innerHTML = Number.parseFloat(flotEightteen).toFixed(3);
         });
 
 
