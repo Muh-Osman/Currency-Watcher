@@ -132,23 +132,30 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
 
 
 
+
+        function calc(oldLetter, m) {
+            return Number.parseFloat(((oldLetter - currency.rates[m]) / oldLetter) * 100).toFixed(2) + `%`;
+        }
+
+
+
         var oldA = window.localStorage.getItem('SAR');
         var arrowsar = document.querySelector('.arrowsar');
         var percentsar = document.querySelector('.percentsar');
 
         if (oldA > currency.rates['SAR']) {
             arrowsar.innerHTML = up;
-            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.innerHTML = calc(oldA, 'SAR');
             percentsar.style.color = 'green';
 
         } else if (oldA < currency.rates['SAR']) {
             arrowsar.innerHTML = down;
-            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.innerHTML = calc(oldA, 'SAR');
             percentsar.style.color = 'red';
 
         } else {
             arrowsar.innerHTML = equal;
-            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.innerHTML = calc(oldA, 'SAR');
             percentsar.style.color = 'blue';
         }
 
@@ -156,263 +163,382 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
 
         var oldB = window.localStorage.getItem('EGP');
         var arrowegp = document.querySelector('.arrowegp');
+        var percentegp = document.querySelector('.percentegp');
+
 
         if (oldB > currency.rates['EGP']) {
             arrowegp.innerHTML = up;
+            percentegp.innerHTML = calc(oldB, 'EGP');
+            percentegp.style.color = 'green';
 
         } else if (oldB < currency.rates['EGP']) {
-
             arrowegp.innerHTML = down;
+            percentegp.innerHTML = calc(oldB, 'EGP');
+            percentegp.style.color = 'red';
 
         } else {
             arrowegp.innerHTML = equal;
+            percentegp.innerHTML = calc(oldB, 'EGP');
+            percentegp.style.color = 'blue';
         }
 
 
 
         var oldC = window.localStorage.getItem('AED');
         var arrowaed = document.querySelector('.arrowaed');
+        var percentaed = document.querySelector('.percentaed');
+
 
         if (oldC > currency.rates['AED']) {
             arrowaed.innerHTML = up;
+            percentaed.innerHTML = calc(oldC, 'AED');
+            percentaed.style.color = 'green';
 
         } else if (oldC < currency.rates['AED']) {
-
             arrowaed.innerHTML = down;
+            percentaed.innerHTML = calc(oldC, 'AED');
+            percentaed.style.color = 'red';
 
         } else {
             arrowaed.innerHTML = equal;
+            percentaed.innerHTML = calc(oldC, 'AED');
+            percentaed.style.color = 'blue';
         }
 
 
         var oldD = window.localStorage.getItem('JOD');
         var arrowjod = document.querySelector('.arrowjod');
+        var percentjod = document.querySelector('.percentjod');
+
 
         if (oldD > currency.rates['JOD']) {
             arrowjod.innerHTML = up;
+            percentjod.innerHTML = calc(oldD, 'JOD');
+            percentjod.style.color = 'green';
 
         } else if (oldD < currency.rates['JOD']) {
-
             arrowjod.innerHTML = down;
+            percentjod.innerHTML = calc(oldD, 'JOD');
+            percentjod.style.color = 'red';
 
         } else {
             arrowjod.innerHTML = equal;
+            percentjod.innerHTML = calc(oldD, 'JOD');
+            percentjod.style.color = 'blue';
         }
 
 
         var oldE = window.localStorage.getItem('LYD');
         var arrowlyd = document.querySelector('.arrowlyd');
+        var percentlyd = document.querySelector('.percentlyd');
+
 
         if (oldE > currency.rates['LYD']) {
             arrowlyd.innerHTML = up;
+            percentlyd.innerHTML = calc(oldE, 'LYD');
+            percentlyd.style.color = 'green';
 
         } else if (oldE < currency.rates['LYD']) {
-
             arrowlyd.innerHTML = down;
+            percentlyd.innerHTML = calc(oldE, 'LYD');
+            percentlyd.style.color = 'red';
 
         } else {
             arrowlyd.innerHTML = equal;
+            percentlyd.innerHTML = calc(oldE, 'LYD');
+            percentlyd.style.color = 'blue';
         }
 
 
         var oldF = window.localStorage.getItem('KWD');
         var arrowkwd = document.querySelector('.arrowkwd');
+        var percentkwd = document.querySelector('.percentkwd');
+
 
         if (oldF > currency.rates['KWD']) {
             arrowkwd.innerHTML = up;
+            percentkwd.innerHTML = calc(oldF, 'KWD');
+            percentkwd.style.color = 'green';
 
         } else if (oldF < currency.rates['KWD']) {
-
             arrowkwd.innerHTML = down;
+            percentkwd.innerHTML = calc(oldF, 'KWD');
+            percentkwd.style.color = 'red';
 
         } else {
             arrowkwd.innerHTML = equal;
+            percentkwd.innerHTML = calc(oldF, 'KWD');
+            percentkwd.style.color = 'blue';
         }
 
 
         var oldG = window.localStorage.getItem('QAR');
         var arrowqar = document.querySelector('.arrowqar');
+        var percentqar = document.querySelector('.percentqar');
+
 
         if (oldG > currency.rates['QAR']) {
             arrowqar.innerHTML = up;
+            percentqar.innerHTML = calc(oldG, 'QAR');
+            percentqar.style.color = 'green';
 
         } else if (oldG < currency.rates['QAR']) {
-
             arrowqar.innerHTML = down;
+            percentqar.innerHTML = calc(oldG, 'QAR');
+            percentqar.style.color = 'red';
 
         } else {
             arrowqar.innerHTML = equal;
+            percentqar.innerHTML = calc(oldG, 'QAR');
+            percentqar.style.color = 'blue';
         }
 
 
         var oldH = window.localStorage.getItem('BHD');
         var arrowbhd = document.querySelector('.arrowbhd');
+        var percentbhd = document.querySelector('.percentbhd');
+
 
         if (oldH > currency.rates['BHD']) {
             arrowbhd.innerHTML = up;
+            percentbhd.innerHTML = calc(oldH, 'BHD');
+            percentbhd.style.color = 'green';
 
         } else if (oldH < currency.rates['BHD']) {
-
             arrowbhd.innerHTML = down;
+            percentbhd.innerHTML = calc(oldH, 'BHD');
+            percentbhd.style.color = 'red';
 
         } else {
             arrowbhd.innerHTML = equal;
+            percentbhd.innerHTML = calc(oldH, 'BHD');
+            percentbhd.style.color = 'blue';
         }
 
 
         var oldI = window.localStorage.getItem('OMR');
         var arrowomr = document.querySelector('.arrowomr');
+        var percentomr = document.querySelector('.percentomr');
+
 
         if (oldI > currency.rates['OMR']) {
             arrowomr.innerHTML = up;
+            percentomr.innerHTML = calc(oldI, 'OMR');
+            percentomr.style.color = 'green';
 
         } else if (oldI < currency.rates['OMR']) {
-
             arrowomr.innerHTML = down;
+            percentomr.innerHTML = calc(oldI, 'OMR');
+            percentomr.style.color = 'red';
 
         } else {
             arrowomr.innerHTML = equal;
+            percentomr.innerHTML = calc(oldI, 'OMR');
+            percentomr.style.color = 'blue';
         }
 
 
         var oldJ = window.localStorage.getItem('EUR');
         var arroweur = document.querySelector('.arroweur');
+        var percenteur = document.querySelector('.percenteur');
+
 
         if (oldJ > currency.rates['EUR']) {
             arroweur.innerHTML = up;
+            percenteur.innerHTML = calc(oldJ, 'EUR');
+            percenteur.style.color = 'green';
 
         } else if (oldJ < currency.rates['EUR']) {
-
             arroweur.innerHTML = down;
+            percenteur.innerHTML = calc(oldJ, 'EUR');
+            percenteur.style.color = 'red';
 
         } else {
             arroweur.innerHTML = equal;
+            percenteur.innerHTML = calc(oldJ, 'EUR');
+            percenteur.style.color = 'blue';
         }
 
 
         var oldK = window.localStorage.getItem('CAD');
         var arrowcad = document.querySelector('.arrowcad');
+        var percentcad = document.querySelector('.percentcad');
+
 
         if (oldK > currency.rates['CAD']) {
             arrowcad.innerHTML = up;
+            percentcad.innerHTML = calc(oldK, 'CAD');
+            percentcad.style.color = 'green';
 
         } else if (oldK < currency.rates['CAD']) {
-
             arrowcad.innerHTML = down;
+            percentcad.innerHTML = calc(oldK, 'CAD');
+            percentcad.style.color = 'red';
 
         } else {
             arrowcad.innerHTML = equal;
+            percentcad.innerHTML = calc(oldK, 'CAD');
+            percentcad.style.color = 'blue';
         }
 
 
 
         var oldL = window.localStorage.getItem('GBP');
         var arrowgbp = document.querySelector('.arrowgbp');
+        var percentgbp = document.querySelector('.percentgbp');
+
 
         if (oldL > currency.rates['GBP']) {
             arrowgbp.innerHTML = up;
+            percentgbp.innerHTML = calc(oldL, 'GBP');
+            percentgbp.style.color = 'green';
 
         } else if (oldL < currency.rates['GBP']) {
-
             arrowgbp.innerHTML = down;
+            percentgbp.innerHTML = calc(oldL, 'GBP');
+            percentgbp.style.color = 'red';
 
         } else {
             arrowgbp.innerHTML = equal;
+            percentgbp.innerHTML = calc(oldL, 'GBP');
+            percentgbp.style.color = 'blue';
         }
 
 
 
         var oldM = window.localStorage.getItem('TRY');
         var arrowtry = document.querySelector('.arrowtry');
+        var percenttry = document.querySelector('.percenttry');
+
 
         if (oldM > currency.rates['TRY']) {
             arrowtry.innerHTML = up;
+            percenttry.innerHTML = calc(oldM, 'TRY');
+            percenttry.style.color = 'green';
 
         } else if (oldM < currency.rates['TRY']) {
-
             arrowtry.innerHTML = down;
+            percenttry.innerHTML = calc(oldM, 'TRY');
+            percenttry.style.color = 'red';
 
         } else {
             arrowtry.innerHTML = equal;
+            percenttry.innerHTML = calc(oldM, 'TRY');
+            percenttry.style.color = 'blue';
         }
 
 
 
         var oldN = window.localStorage.getItem('SEK');
         var arrowsek = document.querySelector('.arrowsek');
+        var percentsek = document.querySelector('.percentsek');
+
 
         if (oldN > currency.rates['SEK']) {
             arrowsek.innerHTML = up;
+            percentsek.innerHTML = calc(oldN, 'SEK');
+            percentsek.style.color = 'green';
 
         } else if (oldN < currency.rates['SEK']) {
-
             arrowsek.innerHTML = down;
+            percentsek.innerHTML = calc(oldN, 'SEK');
+            percentsek.style.color = 'red';
 
         } else {
             arrowsek.innerHTML = equal;
+            percentsek.innerHTML = calc(oldN, 'SEK');
+            percentsek.style.color = 'blue';
         }
 
 
         var oldO = window.localStorage.getItem('NOK');
         var arrownok = document.querySelector('.arrownok');
+        var percentnok = document.querySelector('.percentnok');
+
 
         if (oldO > currency.rates['NOK']) {
             arrownok.innerHTML = up;
+            percentnok.innerHTML = calc(oldO, 'NOK');
+            percentnok.style.color = 'green';
 
         } else if (oldO < currency.rates['NOK']) {
-
             arrownok.innerHTML = down;
+            percentnok.innerHTML = calc(oldO, 'NOK');
+            percentnok.style.color = 'red';
 
         } else {
             arrownok.innerHTML = equal;
+            percentnok.innerHTML = calc(oldO, 'NOK');
+            percentnok.style.color = 'blue';
         }
 
 
 
         var oldP = window.localStorage.getItem('DKK');
         var arrowdkk = document.querySelector('.arrowdkk');
+        var percentdkk = document.querySelector('.percentdkk');
+
 
         if (oldP > currency.rates['DKK']) {
             arrowdkk.innerHTML = up;
+            percentdkk.innerHTML = calc(oldP, 'DKK');
+            percentdkk.style.color = 'green';
 
         } else if (oldP < currency.rates['DKK']) {
-
             arrowdkk.innerHTML = down;
+            percentdkk.innerHTML = calc(oldP, 'DKK');
+            percentdkk.style.color = 'red';
 
         } else {
             arrowdkk.innerHTML = equal;
+            percentdkk.innerHTML = calc(oldP, 'DKK');
+            percentdkk.style.color = 'blue';
         }
 
 
 
         var oldQ = window.localStorage.getItem('BTC');
         var arrowbtc = document.querySelector('.arrowbtc');
+        var percentbtc = document.querySelector('.percentbtc');
+
 
         if (oldQ > currency.rates['BTC']) {
             arrowbtc.innerHTML = up;
+            percentbtc.innerHTML = calc(oldQ, 'BTC');
+            percentbtc.style.color = 'green';
 
         } else if (oldQ < currency.rates['BTC']) {
-
             arrowbtc.innerHTML = down;
+            percentbtc.innerHTML = calc(oldQ, 'BTC');
+            percentbtc.style.color = 'red';
 
         } else {
             arrowbtc.innerHTML = equal;
+            percentbtc.innerHTML = calc(oldQ, 'BTC');
+            percentbtc.style.color = 'blue';
         }
 
 
 
         var oldR = window.localStorage.getItem('ETH');
         var arroweth = document.querySelector('.arroweth');
+        var percenteth = document.querySelector('.percenteth');
+
 
         if (oldR > currency.rates['ETH']) {
             arroweth.innerHTML = up;
+            percenteth.innerHTML = calc(oldR, 'ETH');
+            percenteth.style.color = 'green';
 
         } else if (oldR < currency.rates['ETH']) {
-
             arroweth.innerHTML = down;
+            percenteth.innerHTML = calc(oldR, 'ETH');
+            percenteth.style.color = 'red';
 
         } else {
             arroweth.innerHTML = equal;
+            percenteth.innerHTML = calc(oldR, 'ETH');
+            percenteth.style.color = 'blue';
         }
 
 
