@@ -10,6 +10,8 @@ body {
     font-size: 18px;
     color: #3f3f42;
     background-color: #202124;
+    max-width: 1600px;
+    margin: auto;
 }
 
 .usd {
