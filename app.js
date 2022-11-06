@@ -134,18 +134,22 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
 
         var oldA = window.localStorage.getItem('SAR');
         var arrowsar = document.querySelector('.arrowsar');
+        var percentsar = document.querySelector('.percentsar');
 
         if (oldA > currency.rates['SAR']) {
             arrowsar.innerHTML = up;
-            console.log(((oldA - currency.rates['SAR']) / oldA) * 100 + `%`)
+            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.style.color = 'green';
 
         } else if (oldA < currency.rates['SAR']) {
             arrowsar.innerHTML = down;
-            console.log(((oldA - currency.rates['SAR']) / oldA) * 100 + `%`)
+            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.style.color = 'red';
 
         } else {
             arrowsar.innerHTML = equal;
-            console.log(((oldA - currency.rates['SAR']) / oldA) * 100 + `%`)
+            percentsar.innerHTML = Number.parseFloat(((oldA - currency.rates['SAR']) / oldA) * 100).toFixed(2) + `%`;
+            percentsar.style.color = 'blue';
         }
 
 

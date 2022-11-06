@@ -191,6 +191,10 @@ span {
     width: 35px;
 }
 
+.percent {
+    font-size: 14px;
+}
+
 
 @media (max-width: 575.98px) {
     .currency-box>div {
