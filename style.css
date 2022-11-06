@@ -87,11 +87,6 @@ img {
 
 }
 
-
-
-
-
-
 .input-box {
     display: flex;
     align-items: center;
@@ -148,9 +143,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-
-
-
 .currency-box {
     display: flex;
     align-items: center;
@@ -164,7 +156,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .currency-box>div {
-    /* width: 150px; */
     flex-basis: calc((100% / 8) - 14px);
     aspect-ratio: 1 / 1;
     background-color: #e9ecef;
@@ -173,18 +164,24 @@ input[type=number]::-webkit-inner-spin-button {
     border-radius: 0.375rem;
     transition: .2s;
     overflow: hidden;
-    /* box-shadow: rgba(256, 256, 256, 0.16) 0px 3px 6px, rgba(256, 256, 256, 0.23) 0px 3px 6px; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 
 }
 
 .currency-box>div:hover {
     scale: 1.05;
-    /* box-shadow: rgba(256, 256, 256, 0.16) 0px 3px 6px, rgba(256, 256, 256, 0.23) 0px 3px 6px; */
 }
 
 span {
     display: block;
     margin-top: 50px;
+}
+
+.flag {
+    margin-bottom: 5px;
 }
 
 .flag>img {
@@ -196,15 +193,36 @@ span {
 }
 
 
-@media (max-width: 575.98px) {
-    .currency-box>div {
-        flex-basis: calc((100% / 3) - 10px) !important;
-    }
+
+p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 
 
-@media (max-width: 825px) {
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+    .currency-box>div {
+        flex-basis: calc((100% / 7) - 13px);
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .currency-box>div {
+        flex-basis: calc((100% / 6) - 13px);
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
     .time {
         position: unset;
         flex-basis: 100%;
@@ -223,23 +241,21 @@ span {
         width: 45%;
     }
 
-
     .currency-box>div {
-        flex-basis: calc((100% / 4) - 12px);
+        flex-basis: calc((100% / 5) - 12px);
     }
 }
 
-
-
-
-
-
-p {
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .currency-box>div {
+        flex-basis: calc((100% / 3) - 10px);
+    }
 }
 
-a {
-    text-decoration: none;
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .currency-box>div {
+        flex-basis: calc((100% / 2) - 8px);
+    }
 }

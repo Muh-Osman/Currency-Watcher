@@ -544,11 +544,3 @@ fetch('https://api.currencyfreaks.com/latest?apikey=4436bcb894744cca88efe65f4232
 
 
     });
-
-
-
-
-
-
-
-
